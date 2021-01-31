@@ -1,4 +1,4 @@
-# Nasa Exoplanets Explorer
+# Exoplanets Explorer
 
 esse repo esta sendo desenvolvido para ajudar as pessoas a terem pelo menos uma interface bonita
 para ver os dados e pesquisar sobre exoplanets da api da nasa
