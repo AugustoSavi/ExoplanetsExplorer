@@ -3,7 +3,7 @@
 esse repo esta sendo desenvolvido para ajudar as pessoas a terem pelo menos uma interface bonita
 para ver os dados e pesquisar sobre exoplanets da api da nasa
 
-![exoplanets](https://user-images.githubusercontent.com/32443720/106372532-5be17300-634f-11eb-9142-73b39b5721d2.PNG)
+![image](https://user-images.githubusercontent.com/32443720/106604928-0f5c8a00-653f-11eb-8d6e-0a3e9a5ec153.png)
 
 a intenção e só uma grid com os exoplanets e quando o usuario clicar em More ira abrir um modal com todas as informações sobre aquele exoplaneta
 ## Links uteis 
