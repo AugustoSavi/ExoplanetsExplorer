@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import axios from 'axios';
 import database from '../database.json';
-import { Container, CardDeck, Row, Card, Button, Navbar, Form, FormControl } from 'react-bootstrap'
-import VerticallyCenteredModal from '../src/components/VerticallyCenteredModal';
+import { Container, CardDeck, Button, Navbar, Form, FormControl } from 'react-bootstrap'
+
+import CardExoplanet from '../src/components/CardExoplanet';
 
 /*
 async function getExoplanets(){
@@ -15,8 +16,6 @@ async function getExoplanets(){
 
 export default function Home() {
   
-  const [modalShow, setModalShow] = React.useState(false);
-
   return (
       <>
       <Head>
@@ -34,27 +33,13 @@ export default function Home() {
 
         <Container style={{ paddingTop: 70 }}>
           <CardDeck className="justify-content-md-center">
-          {database.map((exoplanet) => {
-            return (
-              <Row className="justify-content-md-center" key= {exoplanet.pl_name}>
-                <Card className="sml-card" style={{ marginRight: 30 }} key= {exoplanet.pl_name}>
-                  <Card.Body>
-                    <Card.Title>{exoplanet.pl_name}</Card.Title>
-                    <Card.Text>
-                      <strong>Host Star Name:</strong> {exoplanet.pl_hostname}
-                    </Card.Text>
-                    <Button onClick={() => setModalShow(true)} >
-                      More &rarr;
-                    </Button>
-                  </Card.Body>
-                </Card >
-              </Row>
-            );
+
+          {database.map((exoplanet, index) => {
+            return <CardExoplanet exoplanet={exoplanet} key={index}/>
           })}
+
           </CardDeck>
         </Container>
-        
-        <VerticallyCenteredModal show={modalShow} onHide={() => setModalShow(false)}/>
     </>
   )
 }
